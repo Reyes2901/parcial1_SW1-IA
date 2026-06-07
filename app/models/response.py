@@ -50,6 +50,7 @@ class Transition(BaseModel):
 class DiagramResponse(BaseModel):
     name: str                    # nombre sugerido para la política
     description: str             # descripción del proceso generado
+    bpmnXml: Optional[str] = None # ◄--- ¡ESTA ES LA LÍNEA AGREGADA!
     lanes: List[Lane]
     nodes: List[Node]
     transitions: List[Transition]
